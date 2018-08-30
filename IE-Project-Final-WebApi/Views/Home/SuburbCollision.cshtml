@@ -1,0 +1,63 @@
+﻿@{
+    ViewBag.Title = "SuburbCollision";
+}
+<h2>Statistics</h2>
+
+<!-- Using the scripts for embedding tableau reports -->
+
+<script src="https://public.tableau.com/javascripts/api/tableau-2.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.3.2/react.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.3.2/react-dom.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/remarkable/1.7.1/remarkable.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+<h1>
+    Nummber of animal collision as per Suburb
+</h1>
+
+<p>
+    <b>
+        As this histogram shows Bendigo is the worst suburb with 50 records of wildlife-vehicle-collision. 
+        As the result, visitors should dive more carefully in these suburbs and original graph only presents the suburbs that number of wildlife-vehicle-collision is over 15. 
+        You can refine the minimum number or maximum number to see more details as you want.
+    </b>
+
+</p>
+
+
+<!-- Script to embed tableau reports -->
+
+<script>
+
+    var viz, workbook, activeSheet;
+    $(document).ready(function () {
+        initializeViz();
+    });
+
+
+    function initializeViz() {
+
+
+        var placeholderDiv = document.getElementById("tableauViz");
+        //Options to show the sheet
+        var options = {
+
+            width: "100%",
+            height: "800px",
+            onFirstInteractive: function () {
+                workbook = viz.getWorkbook();
+                activeSheet = workbook.getActiveSheet();
+            }
+
+        };
+        //URL to the sheet
+        
+        var url = 'https://public.tableau.com/views/jash-accidents_in_suburbs_over_15/Sheet2?:embed=y&:display_count=yes'
+        
+        viz = new tableauSoftware.Viz(placeholderDiv, url, options);
+        
+    }
+</script>
+
+

@@ -1,0 +1,390 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="wildlifeaidModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'wildlifeaid.dbo.Animal_Crashes' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Animal_Crashes">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="X" Type="float" />
+          <Property Name="Y" Type="float" />
+          <Property Name="OBJECTID" Type="float" />
+          <Property Name="ACCIDENT_NO" Type="nvarchar" MaxLength="255" />
+          <Property Name="ABS_CODE" Type="nvarchar" MaxLength="255" />
+          <Property Name="ACCIDENT_STATUS" Type="nvarchar" MaxLength="255" />
+          <Property Name="ACCIDENT_DATE" Type="datetime" />
+          <Property Name="ACCIDENT_TIME" Type="nvarchar" MaxLength="255" />
+          <Property Name="ALCOHOLTIME" Type="nvarchar" MaxLength="255" />
+          <Property Name="ACCIDENT_TYPE" Type="nvarchar" MaxLength="255" />
+          <Property Name="DAY_OF_WEEK" Type="nvarchar" MaxLength="255" />
+          <Property Name="DCA_CODE" Type="nvarchar" MaxLength="255" />
+          <Property Name="HIT_RUN_FLAG" Type="nvarchar" MaxLength="255" />
+          <Property Name="LIGHT_CONDITION" Type="nvarchar" MaxLength="255" />
+          <Property Name="POLICE_ATTEND" Type="nvarchar" MaxLength="255" />
+          <Property Name="ROAD_GEOMETRY" Type="nvarchar" MaxLength="255" />
+          <Property Name="SEVERITY" Type="nvarchar" MaxLength="255" />
+          <Property Name="SPEED_ZONE" Type="nvarchar" MaxLength="255" />
+          <Property Name="RUN_OFFROAD" Type="nvarchar" MaxLength="255" />
+          <Property Name="NODE_ID" Type="float" />
+          <Property Name="LONGITUDE" Type="float" />
+          <Property Name="LATITUDE" Type="float" />
+          <Property Name="NODE_TYPE" Type="nvarchar" MaxLength="255" />
+          <Property Name="LGA_NAME" Type="nvarchar" MaxLength="255" />
+          <Property Name="REGION_NAME" Type="nvarchar" MaxLength="255" />
+          <Property Name="VICGRID_X" Type="float" />
+          <Property Name="VICGRID_Y" Type="float" />
+          <Property Name="TOTAL_PERSONS" Type="float" />
+          <Property Name="INJ_OR_FATAL" Type="float" />
+          <Property Name="FATALITY" Type="float" />
+          <Property Name="SERIOUSINJURY" Type="float" />
+          <Property Name="OTHERINJURY" Type="float" />
+          <Property Name="NONINJURED" Type="float" />
+          <Property Name="MALES" Type="float" />
+          <Property Name="FEMALES" Type="float" />
+          <Property Name="BICYCLIST" Type="float" />
+          <Property Name="PASSENGER" Type="float" />
+          <Property Name="DRIVER" Type="float" />
+          <Property Name="PEDESTRIAN" Type="float" />
+          <Property Name="PILLION" Type="float" />
+          <Property Name="MOTORIST" Type="float" />
+          <Property Name="UNKNOWN" Type="float" />
+          <Property Name="PED_CYCLIST_5_12" Type="float" />
+          <Property Name="PED_CYCLIST_13_18" Type="float" />
+          <Property Name="OLD_PEDESTRIAN" Type="float" />
+          <Property Name="OLD_DRIVER" Type="float" />
+          <Property Name="YOUNG_DRIVER" Type="float" />
+          <Property Name="ALCOHOL_RELATED" Type="nvarchar" MaxLength="255" />
+          <Property Name="UNLICENCSED" Type="float" />
+          <Property Name="NO_OF_VEHICLES" Type="float" />
+          <Property Name="HEAVYVEHICLE" Type="float" />
+          <Property Name="PASSENGERVEHICLE" Type="float" />
+          <Property Name="MOTORCYCLE" Type="float" />
+          <Property Name="PUBLICVEHICLE" Type="float" />
+          <Property Name="DEG_URBAN_NAME" Type="nvarchar" MaxLength="255" />
+          <Property Name="DEG_URBAN_ALL" Type="nvarchar" MaxLength="255" />
+          <Property Name="LGA_NAME_ALL" Type="nvarchar" MaxLength="255" />
+          <Property Name="REGION_NAME_ALL" Type="nvarchar" MaxLength="255" />
+          <Property Name="SRNS" Type="nvarchar" MaxLength="255" />
+          <Property Name="SRNS_ALL" Type="nvarchar" MaxLength="255" />
+          <Property Name="RMA" Type="nvarchar" MaxLength="255" />
+          <Property Name="RMA_ALL" Type="nvarchar" MaxLength="255" />
+          <Property Name="DIVIDED" Type="nvarchar" MaxLength="255" />
+          <Property Name="DIVIDED_ALL" Type="nvarchar" MaxLength="255" />
+          <Property Name="STAT_DIV_NAME" Type="nvarchar" MaxLength="255" />
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'wildlifeaid.sys.database_firewall_rules' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="database_firewall_rules">
+          <Key>
+            <PropertyRef Name="id" />
+            <PropertyRef Name="name" />
+            <PropertyRef Name="start_ip_address" />
+            <PropertyRef Name="end_ip_address" />
+            <PropertyRef Name="create_date" />
+            <PropertyRef Name="modify_date" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="start_ip_address" Type="varchar" MaxLength="45" Nullable="false" />
+          <Property Name="end_ip_address" Type="varchar" MaxLength="45" Nullable="false" />
+          <Property Name="create_date" Type="datetime" Nullable="false" />
+          <Property Name="modify_date" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="wildlifeaidModelStoreContainer">
+          <EntitySet Name="Animal_Crashes" EntityType="Self.Animal_Crashes" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Animal_Crashes].[X] AS [X], 
+    [Animal_Crashes].[Y] AS [Y], 
+    [Animal_Crashes].[OBJECTID] AS [OBJECTID], 
+    [Animal_Crashes].[ACCIDENT_NO] AS [ACCIDENT_NO], 
+    [Animal_Crashes].[ABS_CODE] AS [ABS_CODE], 
+    [Animal_Crashes].[ACCIDENT_STATUS] AS [ACCIDENT_STATUS], 
+    [Animal_Crashes].[ACCIDENT_DATE] AS [ACCIDENT_DATE], 
+    [Animal_Crashes].[ACCIDENT_TIME] AS [ACCIDENT_TIME], 
+    [Animal_Crashes].[ALCOHOLTIME] AS [ALCOHOLTIME], 
+    [Animal_Crashes].[ACCIDENT_TYPE] AS [ACCIDENT_TYPE], 
+    [Animal_Crashes].[DAY_OF_WEEK] AS [DAY_OF_WEEK], 
+    [Animal_Crashes].[DCA_CODE] AS [DCA_CODE], 
+    [Animal_Crashes].[HIT_RUN_FLAG] AS [HIT_RUN_FLAG], 
+    [Animal_Crashes].[LIGHT_CONDITION] AS [LIGHT_CONDITION], 
+    [Animal_Crashes].[POLICE_ATTEND] AS [POLICE_ATTEND], 
+    [Animal_Crashes].[ROAD_GEOMETRY] AS [ROAD_GEOMETRY], 
+    [Animal_Crashes].[SEVERITY] AS [SEVERITY], 
+    [Animal_Crashes].[SPEED_ZONE] AS [SPEED_ZONE], 
+    [Animal_Crashes].[RUN_OFFROAD] AS [RUN_OFFROAD], 
+    [Animal_Crashes].[NODE_ID] AS [NODE_ID], 
+    [Animal_Crashes].[LONGITUDE] AS [LONGITUDE], 
+    [Animal_Crashes].[LATITUDE] AS [LATITUDE], 
+    [Animal_Crashes].[NODE_TYPE] AS [NODE_TYPE], 
+    [Animal_Crashes].[LGA_NAME] AS [LGA_NAME], 
+    [Animal_Crashes].[REGION_NAME] AS [REGION_NAME], 
+    [Animal_Crashes].[VICGRID_X] AS [VICGRID_X], 
+    [Animal_Crashes].[VICGRID_Y] AS [VICGRID_Y], 
+    [Animal_Crashes].[TOTAL_PERSONS] AS [TOTAL_PERSONS], 
+    [Animal_Crashes].[INJ_OR_FATAL] AS [INJ_OR_FATAL], 
+    [Animal_Crashes].[FATALITY] AS [FATALITY], 
+    [Animal_Crashes].[SERIOUSINJURY] AS [SERIOUSINJURY], 
+    [Animal_Crashes].[OTHERINJURY] AS [OTHERINJURY], 
+    [Animal_Crashes].[NONINJURED] AS [NONINJURED], 
+    [Animal_Crashes].[MALES] AS [MALES], 
+    [Animal_Crashes].[FEMALES] AS [FEMALES], 
+    [Animal_Crashes].[BICYCLIST] AS [BICYCLIST], 
+    [Animal_Crashes].[PASSENGER] AS [PASSENGER], 
+    [Animal_Crashes].[DRIVER] AS [DRIVER], 
+    [Animal_Crashes].[PEDESTRIAN] AS [PEDESTRIAN], 
+    [Animal_Crashes].[PILLION] AS [PILLION], 
+    [Animal_Crashes].[MOTORIST] AS [MOTORIST], 
+    [Animal_Crashes].[UNKNOWN] AS [UNKNOWN], 
+    [Animal_Crashes].[PED_CYCLIST_5_12] AS [PED_CYCLIST_5_12], 
+    [Animal_Crashes].[PED_CYCLIST_13_18] AS [PED_CYCLIST_13_18], 
+    [Animal_Crashes].[OLD_PEDESTRIAN] AS [OLD_PEDESTRIAN], 
+    [Animal_Crashes].[OLD_DRIVER] AS [OLD_DRIVER], 
+    [Animal_Crashes].[YOUNG_DRIVER] AS [YOUNG_DRIVER], 
+    [Animal_Crashes].[ALCOHOL_RELATED] AS [ALCOHOL_RELATED], 
+    [Animal_Crashes].[UNLICENCSED] AS [UNLICENCSED], 
+    [Animal_Crashes].[NO_OF_VEHICLES] AS [NO_OF_VEHICLES], 
+    [Animal_Crashes].[HEAVYVEHICLE] AS [HEAVYVEHICLE], 
+    [Animal_Crashes].[PASSENGERVEHICLE] AS [PASSENGERVEHICLE], 
+    [Animal_Crashes].[MOTORCYCLE] AS [MOTORCYCLE], 
+    [Animal_Crashes].[PUBLICVEHICLE] AS [PUBLICVEHICLE], 
+    [Animal_Crashes].[DEG_URBAN_NAME] AS [DEG_URBAN_NAME], 
+    [Animal_Crashes].[DEG_URBAN_ALL] AS [DEG_URBAN_ALL], 
+    [Animal_Crashes].[LGA_NAME_ALL] AS [LGA_NAME_ALL], 
+    [Animal_Crashes].[REGION_NAME_ALL] AS [REGION_NAME_ALL], 
+    [Animal_Crashes].[SRNS] AS [SRNS], 
+    [Animal_Crashes].[SRNS_ALL] AS [SRNS_ALL], 
+    [Animal_Crashes].[RMA] AS [RMA], 
+    [Animal_Crashes].[RMA_ALL] AS [RMA_ALL], 
+    [Animal_Crashes].[DIVIDED] AS [DIVIDED], 
+    [Animal_Crashes].[DIVIDED_ALL] AS [DIVIDED_ALL], 
+    [Animal_Crashes].[STAT_DIV_NAME] AS [STAT_DIV_NAME], 
+    [Animal_Crashes].[ID] AS [ID]
+    FROM [dbo].[Animal_Crashes] AS [Animal_Crashes]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="database_firewall_rules" EntityType="Self.database_firewall_rules" store:Type="Views" store:Schema="sys">
+            <DefiningQuery>SELECT 
+    [database_firewall_rules].[id] AS [id], 
+    [database_firewall_rules].[name] AS [name], 
+    [database_firewall_rules].[start_ip_address] AS [start_ip_address], 
+    [database_firewall_rules].[end_ip_address] AS [end_ip_address], 
+    [database_firewall_rules].[create_date] AS [create_date], 
+    [database_firewall_rules].[modify_date] AS [modify_date]
+    FROM [sys].[database_firewall_rules] AS [database_firewall_rules]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="wildlifeaidModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Animal_Crashes">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="X" Type="Double" />
+          <Property Name="Y" Type="Double" />
+          <Property Name="OBJECTID" Type="Double" />
+          <Property Name="ACCIDENT_NO" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="ABS_CODE" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="ACCIDENT_STATUS" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="ACCIDENT_DATE" Type="DateTime" Precision="3" />
+          <Property Name="ACCIDENT_TIME" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="ALCOHOLTIME" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="ACCIDENT_TYPE" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="DAY_OF_WEEK" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="DCA_CODE" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="HIT_RUN_FLAG" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="LIGHT_CONDITION" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="POLICE_ATTEND" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="ROAD_GEOMETRY" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="SEVERITY" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="SPEED_ZONE" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="RUN_OFFROAD" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="NODE_ID" Type="Double" />
+          <Property Name="LONGITUDE" Type="Double" />
+          <Property Name="LATITUDE" Type="Double" />
+          <Property Name="NODE_TYPE" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="LGA_NAME" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="REGION_NAME" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="VICGRID_X" Type="Double" />
+          <Property Name="VICGRID_Y" Type="Double" />
+          <Property Name="TOTAL_PERSONS" Type="Double" />
+          <Property Name="INJ_OR_FATAL" Type="Double" />
+          <Property Name="FATALITY" Type="Double" />
+          <Property Name="SERIOUSINJURY" Type="Double" />
+          <Property Name="OTHERINJURY" Type="Double" />
+          <Property Name="NONINJURED" Type="Double" />
+          <Property Name="MALES" Type="Double" />
+          <Property Name="FEMALES" Type="Double" />
+          <Property Name="BICYCLIST" Type="Double" />
+          <Property Name="PASSENGER" Type="Double" />
+          <Property Name="DRIVER" Type="Double" />
+          <Property Name="PEDESTRIAN" Type="Double" />
+          <Property Name="PILLION" Type="Double" />
+          <Property Name="MOTORIST" Type="Double" />
+          <Property Name="UNKNOWN" Type="Double" />
+          <Property Name="PED_CYCLIST_5_12" Type="Double" />
+          <Property Name="PED_CYCLIST_13_18" Type="Double" />
+          <Property Name="OLD_PEDESTRIAN" Type="Double" />
+          <Property Name="OLD_DRIVER" Type="Double" />
+          <Property Name="YOUNG_DRIVER" Type="Double" />
+          <Property Name="ALCOHOL_RELATED" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="UNLICENCSED" Type="Double" />
+          <Property Name="NO_OF_VEHICLES" Type="Double" />
+          <Property Name="HEAVYVEHICLE" Type="Double" />
+          <Property Name="PASSENGERVEHICLE" Type="Double" />
+          <Property Name="MOTORCYCLE" Type="Double" />
+          <Property Name="PUBLICVEHICLE" Type="Double" />
+          <Property Name="DEG_URBAN_NAME" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="DEG_URBAN_ALL" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="LGA_NAME_ALL" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="REGION_NAME_ALL" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="SRNS" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="SRNS_ALL" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="RMA" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="RMA_ALL" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="DIVIDED" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="DIVIDED_ALL" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="STAT_DIV_NAME" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="database_firewall_rules">
+          <Key>
+            <PropertyRef Name="id" />
+            <PropertyRef Name="name" />
+            <PropertyRef Name="start_ip_address" />
+            <PropertyRef Name="end_ip_address" />
+            <PropertyRef Name="create_date" />
+            <PropertyRef Name="modify_date" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="start_ip_address" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="end_ip_address" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="create_date" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="modify_date" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityContainer Name="wildlifeaidEntities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Animal_Crashes" EntityType="Self.Animal_Crashes" />
+          <EntitySet Name="database_firewall_rules" EntityType="Self.database_firewall_rules" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="wildlifeaidModelStoreContainer" CdmEntityContainer="wildlifeaidEntities1">
+          <EntitySetMapping Name="Animal_Crashes">
+            <EntityTypeMapping TypeName="wildlifeaidModel.Animal_Crashes">
+              <MappingFragment StoreEntitySet="Animal_Crashes">
+                <ScalarProperty Name="X" ColumnName="X" />
+                <ScalarProperty Name="Y" ColumnName="Y" />
+                <ScalarProperty Name="OBJECTID" ColumnName="OBJECTID" />
+                <ScalarProperty Name="ACCIDENT_NO" ColumnName="ACCIDENT_NO" />
+                <ScalarProperty Name="ABS_CODE" ColumnName="ABS_CODE" />
+                <ScalarProperty Name="ACCIDENT_STATUS" ColumnName="ACCIDENT_STATUS" />
+                <ScalarProperty Name="ACCIDENT_DATE" ColumnName="ACCIDENT_DATE" />
+                <ScalarProperty Name="ACCIDENT_TIME" ColumnName="ACCIDENT_TIME" />
+                <ScalarProperty Name="ALCOHOLTIME" ColumnName="ALCOHOLTIME" />
+                <ScalarProperty Name="ACCIDENT_TYPE" ColumnName="ACCIDENT_TYPE" />
+                <ScalarProperty Name="DAY_OF_WEEK" ColumnName="DAY_OF_WEEK" />
+                <ScalarProperty Name="DCA_CODE" ColumnName="DCA_CODE" />
+                <ScalarProperty Name="HIT_RUN_FLAG" ColumnName="HIT_RUN_FLAG" />
+                <ScalarProperty Name="LIGHT_CONDITION" ColumnName="LIGHT_CONDITION" />
+                <ScalarProperty Name="POLICE_ATTEND" ColumnName="POLICE_ATTEND" />
+                <ScalarProperty Name="ROAD_GEOMETRY" ColumnName="ROAD_GEOMETRY" />
+                <ScalarProperty Name="SEVERITY" ColumnName="SEVERITY" />
+                <ScalarProperty Name="SPEED_ZONE" ColumnName="SPEED_ZONE" />
+                <ScalarProperty Name="RUN_OFFROAD" ColumnName="RUN_OFFROAD" />
+                <ScalarProperty Name="NODE_ID" ColumnName="NODE_ID" />
+                <ScalarProperty Name="LONGITUDE" ColumnName="LONGITUDE" />
+                <ScalarProperty Name="LATITUDE" ColumnName="LATITUDE" />
+                <ScalarProperty Name="NODE_TYPE" ColumnName="NODE_TYPE" />
+                <ScalarProperty Name="LGA_NAME" ColumnName="LGA_NAME" />
+                <ScalarProperty Name="REGION_NAME" ColumnName="REGION_NAME" />
+                <ScalarProperty Name="VICGRID_X" ColumnName="VICGRID_X" />
+                <ScalarProperty Name="VICGRID_Y" ColumnName="VICGRID_Y" />
+                <ScalarProperty Name="TOTAL_PERSONS" ColumnName="TOTAL_PERSONS" />
+                <ScalarProperty Name="INJ_OR_FATAL" ColumnName="INJ_OR_FATAL" />
+                <ScalarProperty Name="FATALITY" ColumnName="FATALITY" />
+                <ScalarProperty Name="SERIOUSINJURY" ColumnName="SERIOUSINJURY" />
+                <ScalarProperty Name="OTHERINJURY" ColumnName="OTHERINJURY" />
+                <ScalarProperty Name="NONINJURED" ColumnName="NONINJURED" />
+                <ScalarProperty Name="MALES" ColumnName="MALES" />
+                <ScalarProperty Name="FEMALES" ColumnName="FEMALES" />
+                <ScalarProperty Name="BICYCLIST" ColumnName="BICYCLIST" />
+                <ScalarProperty Name="PASSENGER" ColumnName="PASSENGER" />
+                <ScalarProperty Name="DRIVER" ColumnName="DRIVER" />
+                <ScalarProperty Name="PEDESTRIAN" ColumnName="PEDESTRIAN" />
+                <ScalarProperty Name="PILLION" ColumnName="PILLION" />
+                <ScalarProperty Name="MOTORIST" ColumnName="MOTORIST" />
+                <ScalarProperty Name="UNKNOWN" ColumnName="UNKNOWN" />
+                <ScalarProperty Name="PED_CYCLIST_5_12" ColumnName="PED_CYCLIST_5_12" />
+                <ScalarProperty Name="PED_CYCLIST_13_18" ColumnName="PED_CYCLIST_13_18" />
+                <ScalarProperty Name="OLD_PEDESTRIAN" ColumnName="OLD_PEDESTRIAN" />
+                <ScalarProperty Name="OLD_DRIVER" ColumnName="OLD_DRIVER" />
+                <ScalarProperty Name="YOUNG_DRIVER" ColumnName="YOUNG_DRIVER" />
+                <ScalarProperty Name="ALCOHOL_RELATED" ColumnName="ALCOHOL_RELATED" />
+                <ScalarProperty Name="UNLICENCSED" ColumnName="UNLICENCSED" />
+                <ScalarProperty Name="NO_OF_VEHICLES" ColumnName="NO_OF_VEHICLES" />
+                <ScalarProperty Name="HEAVYVEHICLE" ColumnName="HEAVYVEHICLE" />
+                <ScalarProperty Name="PASSENGERVEHICLE" ColumnName="PASSENGERVEHICLE" />
+                <ScalarProperty Name="MOTORCYCLE" ColumnName="MOTORCYCLE" />
+                <ScalarProperty Name="PUBLICVEHICLE" ColumnName="PUBLICVEHICLE" />
+                <ScalarProperty Name="DEG_URBAN_NAME" ColumnName="DEG_URBAN_NAME" />
+                <ScalarProperty Name="DEG_URBAN_ALL" ColumnName="DEG_URBAN_ALL" />
+                <ScalarProperty Name="LGA_NAME_ALL" ColumnName="LGA_NAME_ALL" />
+                <ScalarProperty Name="REGION_NAME_ALL" ColumnName="REGION_NAME_ALL" />
+                <ScalarProperty Name="SRNS" ColumnName="SRNS" />
+                <ScalarProperty Name="SRNS_ALL" ColumnName="SRNS_ALL" />
+                <ScalarProperty Name="RMA" ColumnName="RMA" />
+                <ScalarProperty Name="RMA_ALL" ColumnName="RMA_ALL" />
+                <ScalarProperty Name="DIVIDED" ColumnName="DIVIDED" />
+                <ScalarProperty Name="DIVIDED_ALL" ColumnName="DIVIDED_ALL" />
+                <ScalarProperty Name="STAT_DIV_NAME" ColumnName="STAT_DIV_NAME" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="database_firewall_rules">
+            <EntityTypeMapping TypeName="wildlifeaidModel.database_firewall_rules">
+              <MappingFragment StoreEntitySet="database_firewall_rules">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="start_ip_address" ColumnName="start_ip_address" />
+                <ScalarProperty Name="end_ip_address" ColumnName="end_ip_address" />
+                <ScalarProperty Name="create_date" ColumnName="create_date" />
+                <ScalarProperty Name="modify_date" ColumnName="modify_date" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

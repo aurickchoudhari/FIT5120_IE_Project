@@ -1,0 +1,63 @@
+﻿@{
+    ViewBag.Title = "LightCondition";
+}
+<h2>Statistics</h2>
+
+<!-- Using the scripts for embedding tableau reports -->
+
+<script src="https://public.tableau.com/javascripts/api/tableau-2.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.3.2/react.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.3.2/react-dom.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/remarkable/1.7.1/remarkable.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+<h1>
+    Animal collision in different light conditions
+</h1>
+
+<p>
+    <b>
+        This visualisation provides with details of the road and the condition of the light. 
+        The graph displays the count of collsions occured during differnt light condition and hence you could be aware of such streets.
+        You can either hover over the bar charts or click it to get more information regarding it.
+    </b>
+
+</p>
+
+
+
+<!-- Script to embed tableau reports -->
+
+<script>
+
+    var viz, workbook, activeSheet;
+    $(document).ready(function () {
+        initializeViz();
+    });
+
+
+    function initializeViz() {
+
+
+        var placeholderDiv = document.getElementById("tableauViz");
+        //Options to show the sheet
+        var options = {
+
+            width: "100%",
+            height: "800px",
+            onFirstInteractive: function () {
+                workbook = viz.getWorkbook();
+                activeSheet = workbook.getActiveSheet();
+            }
+
+        };
+
+        var url = 'https://public.tableau.com/views/jash-road_type_light_condition/Sheet3?:embed=y&:display_count=yes'
+        
+        viz = new tableauSoftware.Viz(placeholderDiv, url, options);
+        
+    }
+</script>
+
+

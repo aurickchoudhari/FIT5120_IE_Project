@@ -1,0 +1,65 @@
+﻿@{
+    ViewBag.Title = "Stats";
+}
+<h2>Statistics</h2>
+
+<!-- Using the scripts for embedding tableau reports -->
+
+<script src="https://public.tableau.com/javascripts/api/tableau-2.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.3.2/react.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.3.2/react-dom.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/remarkable/1.7.1/remarkable.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+<h1>
+    Explore the animal collision on the Map:
+</h1>
+
+
+
+<p>
+    <b>
+
+    
+    Explore the map to see animals animal collisions and where the animals were in need of our help in Victoria in last 5 years. The points on this map all relate to wildlife-vehicle-collision, reported to Wildlife Victoria.
+
+    You can use with interaction. You can zoom up by icon “+” or down by icon “-” and you can also zoom a particular area using the functions on the top left corner. With each point on the map could pop up with speed information, location suburb and light condition.
+</b>
+</p>
+
+<!-- Script to embed tableau reports -->
+
+<script>
+
+    var viz, workbook, activeSheet;
+    $(document).ready(function () {
+        initializeViz();
+    });
+
+
+    function initializeViz() {
+
+
+        var placeholderDiv = document.getElementById("tableauViz");
+        //Options to show the sheet
+        var options = {
+
+            width: "100%",
+            height: "800px",
+            onFirstInteractive: function () {
+                workbook = viz.getWorkbook();
+                activeSheet = workbook.getActiveSheet();
+            }
+
+        };
+        //URL to the sheet
+        
+        var url = 'https://public.tableau.com/shared/98NBDH6F6?:display_count=yes'
+        
+        viz = new tableauSoftware.Viz(placeholderDiv, url, options);
+        
+    }
+</script>
+
+
