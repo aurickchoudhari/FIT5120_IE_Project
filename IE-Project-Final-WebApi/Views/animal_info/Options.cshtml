@@ -1,0 +1,56 @@
+﻿
+@*@{
+    ViewBag.Title = "Options";
+}*@
+
+
+
+<html>
+<head>
+    <link href="http://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet" />
+  <style>
+      .container{
+          /*background: url(https://collections.museumvictoria.com.au/content/media/48/361498-large.jpg);*/
+          background-color:aquamarine;
+          color:white;
+          height:750px;
+          width:auto;
+          display:flex;
+          justify-content:center;
+          align-items:center;
+          position:relative;
+      }
+
+      .color-overlay{
+          width:100%;
+          height:100%;
+          background:black;
+          opacity: .7;
+          position:absolute;
+      }
+
+ h1{
+     font-family:'Pacifico',cursive;
+     font-size:60px;
+     z-index:1;
+     
+ }
+
+a.my-class { color: white }
+a.my-class:active { color: white }
+a.my-class:link { color: white }
+a.my-class:visited { color: white }
+  </style>
+</head>
+<body>
+
+    
+    <div class="container">
+        <h1>
+            @Html.ActionLink("General information", "anima_info_Index", "animal_info", new { @class = "my-class" })
+        </h1>
+        <div class="color-overlay"></div>
+
+    </div>
+</body>
+</html>

@@ -1,6 +1,6 @@
 ﻿
 @{
-    ViewBag.Title = "Statistics";
+    ViewBag.Title = "Animal Collision";
 }
 
 <h2>Statistics</h2>
@@ -13,46 +13,146 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/remarkable/1.7.1/remarkable.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-<h1>
-    Rate of animal collision in the past years
-</h1>
-
-<p>
-    <b>
-        Wildlife-vehicle-collision accident is increasing over years and the drop of 2017 may cause by the incomplete data supported.
-        You can select a particular year to see the trend in that year with respect to animal collision.
-        This chart provides deatials regarding the more susceptible months for animal collision.
-    </b>
-   
-</p>
-
-<!-- Script to embed tableau reports -->
-
+<div style="text-align:center">
+    <div>
+        <h1>Rate of animal collision in the past years</h1>
+        <p>
+            <b>
+                Wildlife-vehicle-collision is increasing over the past years and the drop of 2017 may cause by the incomplete data supported.
+                You can select a particular year to see the trend in that year with respect to animal collision.
+                This chart provides details regarding the most susceptible months for animal collision.
+            </b>
+        </p>
+    </div>
+    <div id="tableauViz1" style="width:100%;margin-top:50px"></div>
+    <div style="margin-top:50px">
+        <h2> Speed comparision of the vehicle during collision</h2>
+        <p>
+            <b>
+                This graph provides details of how speed and light condition effect wildlife-vehicle-collision.
+                The redder of the color, the higher of the record number.
+                It can be found that the worst case is when driver drives with a speed of 100km/hr and highest record is without street light and followed by day.
+                So please slow down while driving between dusk and dawn in areas populated by wild animals when the nocturnal wildlife is most active and feeding.
+            </b>
+        </p>
+    </div>
+    <div id="tableauViz2" style="width:100%;margin-top:50px"></div>
+    <div style="margin-top:50px">
+        <h2>  Animal collision in different light conditions</h2>
+        <p>
+            <b>
+                This visualisation provides details of the road and the condition of the light.
+                The graph displays the count of collsions occured during differnt light condition and hence you could be aware of such streets.
+                You can either hover over the bar charts or click it to get more information regarding it.
+            </b>
+        </p>
+    </div>
+    <div id="tableauViz3" style="width:100%;margin-top:50px"></div>
+    <div style="margin-top:50px">
+        <h2>   Number of animal collision as per Suburb</h2>
+        <p>
+            <b>
+                As this histogram shows Bendigo is the worst suburb with 50 records of wildlife-vehicle-collision.
+                As the result, visitors should dive more carefully in these suburbs.  
+                Original graph only presents the suburbs which has wildlife-vehicle-collision over 15.
+                You can refine the minimum number or maximum number to see more details as you want.
+            </b>
+        </p>
+    </div>
+    <div id="tableauViz4" style="width:100%;margin-top:50px"></div>
+</div>
 <script>
-
-    var viz, workbook, activeSheet;
-    $(document).ready(function () {
-        initializeViz();
-    });
-
-
-    function initializeViz() {
+        var viz, workbook, activeSheet;
+        $(document).ready(function () {
+            initializeViz_Statistics();
+        });
+        function initializeViz_Statistics() {
 
 
-        var placeholderDiv = document.getElementById("tableauViz");
-        //Options to show the sheet
-        var options = {
+            var placeholderDiv = document.getElementById("tableauViz1");
+            //Options to show the sheet
+            var options = {
 
-            width: "100%",
-            height: "800px",
-            onFirstInteractive: function () {
-                workbook = viz.getWorkbook();
-                activeSheet = workbook.getActiveSheet();
-            }
+                width: "100%",
+                height: "500px",
+                onFirstInteractive: function () {
+                    workbook = viz.getWorkbook();
+                    activeSheet = workbook.getActiveSheet();
+                }
 
-        };
-        //URL to the sheet
-        var url = 'https://public.tableau.com/views/jash-accidents_over_years/Sheet6?:embed=y&:display_count=yes';
-        viz = new tableauSoftware.Viz(placeholderDiv, url, options);
-    }
+            };
+            //URL to the sheet
+            var url = 'https://public.tableau.com/views/jash-accidents_over_years/Sheet6?:embed=y&:display_count=yes';
+            viz = new tableauSoftware.Viz(placeholderDiv, url, options);
+        }
 </script>
+<script>
+        var viz, workbook, activeSheet;
+        $(document).ready(function () {
+            initializeViz_Speed();
+        });
+
+
+        function initializeViz_Speed() {
+
+
+            var placeholderDiv = document.getElementById("tableauViz2");
+            //Options to show the sheet
+            var options = {
+
+                width: "100%",
+                height: "500px",
+                onFirstInteractive: function () {
+                    workbook = viz.getWorkbook();
+                    activeSheet = workbook.getActiveSheet();
+                }
+
+            };
+            //URL to the sheet
+            var url = 'https://public.tableau.com/views/jash-speedlighteffect/Sheet1?:embed=y&:display_count=yes';
+            viz = new tableauSoftware.Viz(placeholderDiv, url, options);
+        }
+</script>
+<script>
+        var viz, workbook, activeSheet;
+        $(document).ready(function () {
+            initializeViz_LightCondition();
+        });
+        function initializeViz_LightCondition() {
+            var placeholderDiv = document.getElementById("tableauViz3");
+            //Options to show the sheet
+            var options = {
+                width: "80%",
+                height: "500px",
+                onFirstInteractive: function () {
+                    workbook = viz.getWorkbook();
+                    activeSheet = workbook.getActiveSheet();
+                }
+            };
+            var url = 'https://public.tableau.com/views/jash-road_type_light_condition/Sheet3?:embed=y&:display_count=yes';
+            viz = new tableauSoftware.Viz(placeholderDiv, url, options);
+        }
+</script>
+<script>
+        var viz, workbook, activeSheet;
+        $(document).ready(function () {
+            initializeViz_SuburbCollision();
+        });
+        function initializeViz_SuburbCollision() {
+                var placeholderDiv = document.getElementById("tableauViz4");
+                //Options to show the sheet
+                var options = {
+                    width: "80%",
+                    height: "500px",
+                    onFirstInteractive: function () {
+                        workbook = viz.getWorkbook();
+                        activeSheet = workbook.getActiveSheet();
+                    }
+                };
+                var url = 'https://public.tableau.com/views/jash-accidents_in_suburbs_over_15_rotate/Sheet2?:embed=y&:display_count=yes'
+                viz = new tableauSoftware.Viz(placeholderDiv, url, options);
+            }
+</script>
+
+
+

@@ -23,6 +23,20 @@ namespace IE_Project_Final_WebApi
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
+            //
+            bundles.Add(new ScriptBundle("~/bundles/scroll").Include(
+                      "~/Scripts/jquery.easing.min.js",
+                      "~/Scripts/jquery.scrollTo.js",
+                      "~/Scripts/wow.min.js"));
+            //
+            bundles.Add(new ScriptBundle("~/bundles/custom").Include(
+                     "~/Scripts/custom.js"));
+            //
+            bundles.Add(new ScriptBundle("~/bundles/tableauviz").Include(
+                     "~/Scripts/tableauviz.js"));
+            //
+            bundles.Add(new ScriptBundle("~/bundles/login").Include(
+                     "~/Scripts/loginJS.js"));
         }
     }
 }

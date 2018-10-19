@@ -1,0 +1,99 @@
+﻿@model IEnumerable<IE_Project_Final_WebApi.Models.Wildlife_Feedback>
+
+@{
+    ViewBag.Title = "Feedback Result";
+    //Layout = null;
+}
+
+
+
+
+<div class="container">
+    <div class="form-group">
+        <br />
+        <br />
+        <br />
+        <h1>
+            Feedback Result:
+        </h1>
+        <div class="alert alert-success">
+            <a href="#" data-dissmiss="alert"></a>
+            <strong>Successful !</strong> Your feedback is successfully saved. Thank You !
+        </div>
+        <h1>
+            Following are the Previous feedbacks:
+        </h1>
+    </div>
+</div>
+
+
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th align="justify">Result</th>
+            <th align="justify">Name</th>
+            <th align="justify">Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var Item in Model)
+        {
+            <tr>
+                <td>@Item.Result</td>
+                <td>@Item.Name</td>
+                <td>@Item.Description</td>
+            </tr>
+        }
+    </tbody>
+</table>
+<br />
+<br />
+
+<!-- Using the scripts for embedding tableau reports -->
+
+<script src="https://public.tableau.com/javascripts/api/tableau-2.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.3.2/react.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.3.2/react-dom.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/remarkable/1.7.1/remarkable.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+<h2>
+    Stastistical representation of the results through the comments in WildlifeAidGuide !
+</h2>
+
+
+<!-- Script to embed tableau reports -->
+<div id="tableauViz" style="width:100%;margin-top:50px"></div>
+<script>
+
+    var viz, workbook, activeSheet;
+    $(document).ready(function () {
+        initializeViz();
+    });
+
+
+    function initializeViz() {
+
+
+        var placeholderDiv = document.getElementById("tableauViz");
+        //Options to show the sheet
+        var options = {
+
+            width: "100%",
+            height: "500px",
+            onFirstInteractive: function () {
+                workbook = viz.getWorkbook();
+                activeSheet = workbook.getActiveSheet();
+            }
+
+        };
+        //URL to the sheet
+        
+        var url = 'https://public.tableau.com/views/database_barchartonly/Dashboard1?:embed=y&:display_count=yes'
+
+        viz = new tableauSoftware.Viz(placeholderDiv, url, options);
+
+    }
+</script>

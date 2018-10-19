@@ -8,6 +8,10 @@ namespace IE_Project_Final_WebApi.Controllers
 {
     public class HomeController : Controller
     {
+        public ActionResult Homepage()
+        {
+            return View();
+        }
         public ActionResult Index()
         {
             //ViewBag.Title = "Home Page";
@@ -25,24 +29,24 @@ namespace IE_Project_Final_WebApi.Controllers
             return View();
         }
 
-        public ActionResult LightCondition()
-        {
-            return View();
-        }
-
-        public ActionResult SuburbCollision()
-        {
-            return View();
-        }
-
-        public ActionResult Speed()
-        {
-            return View();
-        }
-
         public ActionResult About()
         {
             return View();
         }
+        public ActionResult Login()
+        {
+            return View();
+        }
+
+        public ActionResult Feedback_wildlife()
+        {
+            return View();
+        }
+
+        public ActionResult NaturalActivities()
+        {
+            return View();
+        }
+       
     }
 }

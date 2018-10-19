@@ -16,7 +16,7 @@ namespace IE_Project_Final_WebApi
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+                defaults: new { controller = "Home", action = "Homepage", id = UrlParameter.Optional }
             );
         }
     }

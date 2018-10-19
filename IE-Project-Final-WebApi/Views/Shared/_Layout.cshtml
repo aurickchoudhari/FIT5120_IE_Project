@@ -3,10 +3,17 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <title>@ViewBag.Title</title>
-   
 
-    @Styles.Render("~/css/bootstrap.css")
+    <!--logo on browser tag-->
+    <link rel="shortcut icon" href="~/images1/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="~/images1/favicon.ico" type="image/png" />
+
+    <!--load the icon-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+    <title>@ViewBag.Title</title>
+
+    @Styles.Render("~/css/bootstrap-init.css")
     @Styles.Render("~/css/carousel.css")
 
     <script type="text/javascript">
@@ -15,13 +22,13 @@
         }({
             instrumentationKey:"d6be32c1-192d-4dfd-aaa9-c15cf873fc82"
         });
-        
+
         window.appInsights=appInsights;
         appInsights.trackPageView();
     </script>
 </head>
 <body>
-   
+
 
     <!-- Navigation bar -->
 
@@ -29,64 +36,56 @@
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>  
+                    <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
 
                 <a class="navbar-brand" href="#"><img alt="Brand" src="~/images1/only_hornes.jpg" height="30" width="30" /></a>
-                @Html.ActionLink("WILDLIFE AID GUIDE", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-                
-               
+                @Html.ActionLink("WILDLIFE AID GUIDE", "Homepage", "Home", new { area = "" }, new { @class = "navbar-brand" })
+
+
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-
+                    <li>@Html.ActionLink("Home", "Homepage", "Home")</li>
                     <!-- Dropdown List -->
 
                     <li class="dropdown">
 
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> Statistics <span class="caret"></span></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> What we provide <span class="caret"></span></a>
 
                         <ul class="dropdown-menu" role="menu" id="myTab">
                             <li role="presentation">
-                                @Html.ActionLink("Locations of Animal Collision", "Stats", "Home") 
+                                @Html.ActionLink("Animal Collision Information", "Statistics", "Home")
                             </li>
 
                             <li role="presentation">
-                                @Html.ActionLink("Rate of Animal Collision", "Statistics", "Home") 
+                                @Html.ActionLink("General Species", "animal_info_Index", "animal_info")
                             </li>
 
                             <li role="presentation">
-                                @Html.ActionLink("Light condition during Animal Collision", "LightCondition", "Home")
+                                @Html.ActionLink("Map", "Stats", "Home")
                             </li>
 
                             <li role="presentation">
-                                @Html.ActionLink("Rate of Animal Collision in Suburb", "SuburbCollision", "Home")
+                                @Html.ActionLink("Natural Activities", "NaturalActivities", "Home")
                             </li>
-
-                            <li role="presentation">
-                                @Html.ActionLink("Speed of Vehicle while Collision", "Speed", "Home")
-                            </li>
-
                         </ul>
-
                     </li>
-
-
-                    
-               
-                </ul>
-                
+                    <li>@Html.ActionLink("Feedback", "Feedback", "Feedback")</li>
+                </ul> 
             </div>
         </div>
     </div>
     <div class="container body-content">
         @RenderBody()
         <hr />
-       
+        <footer class="col-lg-12" style="margin-top:20px">
+            <p>&copy; JASH  All photos published on Wildlife Aid Guide come from https://collections.museumvictoria.com.au/api/species with all rights reserved &middot;</p>
+        </footer>
     </div>
+
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")

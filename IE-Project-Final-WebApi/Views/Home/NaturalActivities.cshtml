@@ -1,5 +1,5 @@
 ﻿@{
-    ViewBag.Title = "SuburbCollision";
+    ViewBag.Title = "Natural Activities";
 }
 <h2>Statistics</h2>
 
@@ -13,21 +13,12 @@
 
 
 <h1>
-    Nummber of animal collision as per Suburb
+    Activities people were involved which contributed in saving Wildlife
 </h1>
-
-<p>
-    <b>
-        As this histogram shows Bendigo is the worst suburb with 50 records of wildlife-vehicle-collision. 
-        As the result, visitors should dive more carefully in these suburbs and original graph only presents the suburbs that number of wildlife-vehicle-collision is over 15. 
-        You can refine the minimum number or maximum number to see more details as you want.
-    </b>
-
-</p>
 
 
 <!-- Script to embed tableau reports -->
-
+<div id="tableauViz" style="width:100%;margin-top:50px"></div>
 <script>
 
     var viz, workbook, activeSheet;
@@ -44,7 +35,7 @@
         var options = {
 
             width: "100%",
-            height: "800px",
+            height: "500px",
             onFirstInteractive: function () {
                 workbook = viz.getWorkbook();
                 activeSheet = workbook.getActiveSheet();
@@ -52,11 +43,11 @@
 
         };
         //URL to the sheet
-        
-        var url = 'https://public.tableau.com/views/jash-accidents_in_suburbs_over_15/Sheet2?:embed=y&:display_count=yes'
-        
+
+        var url = 'https://public.tableau.com/views/typeofparticipationinnaturalenvironmentrelatedactivities/Sheet1?:embed=y&:display_count=yes'
+
         viz = new tableauSoftware.Viz(placeholderDiv, url, options);
-        
+
     }
 </script>
 

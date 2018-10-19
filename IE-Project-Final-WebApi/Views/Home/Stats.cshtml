@@ -1,5 +1,5 @@
 ﻿@{
-    ViewBag.Title = "Stats";
+    ViewBag.Title = "Map";
 }
 <h2>Statistics</h2>
 
@@ -22,14 +22,14 @@
     <b>
 
     
-    Explore the map to see animals animal collisions and where the animals were in need of our help in Victoria in last 5 years. The points on this map all relate to wildlife-vehicle-collision, reported to Wildlife Victoria.
+    Explore the map to see animal collisions and where the animals were in need of our help in Victoria in last 5 years. The points on this map all relate to wildlife-vehicle-collision, reported to Wildlife Victoria.
 
-    You can use with interaction. You can zoom up by icon “+” or down by icon “-” and you can also zoom a particular area using the functions on the top left corner. With each point on the map could pop up with speed information, location suburb and light condition.
+    You can zoom in by icon “+” or out by icon “-” and you can also zoom a particular area using the functions on the top left corner. Each point on the map could pop up with speed information, location suburb and light condition.
 </b>
 </p>
 
 <!-- Script to embed tableau reports -->
-
+<div id="tableauViz" style="width:100%;margin-top:50px"></div>
 <script>
 
     var viz, workbook, activeSheet;
@@ -46,7 +46,7 @@
         var options = {
 
             width: "100%",
-            height: "800px",
+            height: "500px",
             onFirstInteractive: function () {
                 workbook = viz.getWorkbook();
                 activeSheet = workbook.getActiveSheet();

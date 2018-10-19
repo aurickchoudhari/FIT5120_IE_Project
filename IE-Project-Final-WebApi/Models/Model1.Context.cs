@@ -27,5 +27,7 @@ namespace IE_Project_Final_WebApi.Models
     
         public virtual DbSet<Animal_Crashes> Animal_Crashes { get; set; }
         public virtual DbSet<database_firewall_rules> database_firewall_rules { get; set; }
+
+        public System.Data.Entity.DbSet<IE_Project_Final_WebApi.Models.C_Total_of_species__> C_Total_of_species__ { get; set; }
     }
 }

@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="wildlifeaidModel1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="'Total of species$'">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="animalSubType" Type="nvarchar" MaxLength="255" />
+          <Property Name="animalType" Type="nvarchar" MaxLength="255" />
+          <Property Name="biology" Type="nvarchar(max)" />
+          <Property Name="briefId" Type="nvarchar" MaxLength="255" />
+          <Property Name="colours" Type="nvarchar" MaxLength="255" />
+          <Property Name="commercial" Type="nvarchar" MaxLength="255" />
+          <Property Name="depths" Type="nvarchar" MaxLength="255" />
+          <Property Name="diet" Type="nvarchar" MaxLength="255" />
+          <Property Name="dietCategories" Type="nvarchar" MaxLength="255" />
+          <Property Name="displayTitle" Type="nvarchar" MaxLength="255" />
+          <Property Name="distribution" Type="nvarchar" MaxLength="255" />
+          <Property Name="endemicity" Type="nvarchar" MaxLength="255" />
+          <Property Name="generalDescription" Type="nvarchar(max)" />
+          <Property Name="habitat" Type="nvarchar" MaxLength="255" />
+          <Property Name="habitats" Type="nvarchar" MaxLength="255" />
+          <Property Name="hazards" Type="nvarchar" MaxLength="255" />
+          <Property Name="maximumSize" Type="nvarchar" MaxLength="255" />
+          <Property Name="nationalParks" Type="nvarchar" MaxLength="255" />
+          <Property Name="plants" Type="nvarchar" MaxLength="255" />
+          <Property Name="taxonomy#class" Type="nvarchar" MaxLength="255" />
+          <Property Name="taxonomy#commonName" Type="nvarchar" MaxLength="255" />
+          <Property Name="taxonomy#family" Type="nvarchar" MaxLength="255" />
+          <Property Name="taxonomy#genus" Type="nvarchar" MaxLength="255" />
+          <Property Name="taxonomy#infraorder" Type="nvarchar" MaxLength="255" />
+          <Property Name="taxonomy#kingdom" Type="nvarchar" MaxLength="255" />
+          <Property Name="taxonomy#order" Type="nvarchar" MaxLength="255" />
+          <Property Name="taxonomy#otherCommonNames" Type="nvarchar" MaxLength="255" />
+          <Property Name="taxonomy#phylum" Type="nvarchar" MaxLength="255" />
+          <Property Name="taxonomy#species" Type="nvarchar" MaxLength="255" />
+          <Property Name="taxonomy#subclass" Type="nvarchar" MaxLength="255" />
+          <Property Name="taxonomy#subfamily" Type="nvarchar" MaxLength="255" />
+          <Property Name="taxonomy#subgenus" Type="nvarchar" MaxLength="255" />
+          <Property Name="taxonomy#suborder" Type="nvarchar" MaxLength="255" />
+          <Property Name="taxonomy#subphylum" Type="nvarchar" MaxLength="255" />
+          <Property Name="taxonomy#subspecies" Type="nvarchar" MaxLength="255" />
+          <Property Name="taxonomy#superclass" Type="nvarchar" MaxLength="255" />
+          <Property Name="taxonomy#superfamily" Type="nvarchar" MaxLength="255" />
+          <Property Name="taxonomy#superorder" Type="nvarchar" MaxLength="255" />
+          <Property Name="taxonomy#taxonName" Type="nvarchar" MaxLength="255" />
+          <Property Name="waterColumnLocations" Type="nvarchar" MaxLength="255" />
+          <Property Name="whenActive" Type="nvarchar" MaxLength="255" />
+          <Property Name="whereToLook" Type="nvarchar" MaxLength="255" />
+          <Property Name="yearWritten" Type="float" />
+          <Property Name="url" Type="nvarchar" MaxLength="255" />
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="wildlifeaidModel1StoreContainer">
+          <EntitySet Name="'Total of species$'" EntityType="Self.'Total of species$'" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="wildlifeaidModel1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="C_Total_of_species__">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="animalSubType" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="animalType" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="biology" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="briefId" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="colours" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="commercial" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="depths" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="diet" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="dietCategories" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="displayTitle" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="distribution" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="endemicity" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="generalDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="habitat" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="habitats" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="hazards" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="maximumSize" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="nationalParks" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="plants" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="taxonomy_class" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="taxonomy_commonName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="taxonomy_family" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="taxonomy_genus" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="taxonomy_infraorder" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="taxonomy_kingdom" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="taxonomy_order" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="taxonomy_otherCommonNames" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="taxonomy_phylum" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="taxonomy_species" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="taxonomy_subclass" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="taxonomy_subfamily" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="taxonomy_subgenus" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="taxonomy_suborder" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="taxonomy_subphylum" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="taxonomy_subspecies" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="taxonomy_superclass" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="taxonomy_superfamily" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="taxonomy_superorder" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="taxonomy_taxonName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="waterColumnLocations" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="whenActive" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="whereToLook" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="yearWritten" Type="Double" />
+          <Property Name="url" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityContainer Name="animal_information" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="C_Total_of_species__" EntityType="Self.C_Total_of_species__" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="wildlifeaidModel1StoreContainer" CdmEntityContainer="animal_information">
+          <EntitySetMapping Name="C_Total_of_species__">
+            <EntityTypeMapping TypeName="wildlifeaidModel1.C_Total_of_species__">
+              <MappingFragment StoreEntitySet="'Total of species$'">
+                <ScalarProperty Name="animalSubType" ColumnName="animalSubType" />
+                <ScalarProperty Name="animalType" ColumnName="animalType" />
+                <ScalarProperty Name="biology" ColumnName="biology" />
+                <ScalarProperty Name="briefId" ColumnName="briefId" />
+                <ScalarProperty Name="colours" ColumnName="colours" />
+                <ScalarProperty Name="commercial" ColumnName="commercial" />
+                <ScalarProperty Name="depths" ColumnName="depths" />
+                <ScalarProperty Name="diet" ColumnName="diet" />
+                <ScalarProperty Name="dietCategories" ColumnName="dietCategories" />
+                <ScalarProperty Name="displayTitle" ColumnName="displayTitle" />
+                <ScalarProperty Name="distribution" ColumnName="distribution" />
+                <ScalarProperty Name="endemicity" ColumnName="endemicity" />
+                <ScalarProperty Name="generalDescription" ColumnName="generalDescription" />
+                <ScalarProperty Name="habitat" ColumnName="habitat" />
+                <ScalarProperty Name="habitats" ColumnName="habitats" />
+                <ScalarProperty Name="hazards" ColumnName="hazards" />
+                <ScalarProperty Name="maximumSize" ColumnName="maximumSize" />
+                <ScalarProperty Name="nationalParks" ColumnName="nationalParks" />
+                <ScalarProperty Name="plants" ColumnName="plants" />
+                <ScalarProperty Name="taxonomy_class" ColumnName="taxonomy#class" />
+                <ScalarProperty Name="taxonomy_commonName" ColumnName="taxonomy#commonName" />
+                <ScalarProperty Name="taxonomy_family" ColumnName="taxonomy#family" />
+                <ScalarProperty Name="taxonomy_genus" ColumnName="taxonomy#genus" />
+                <ScalarProperty Name="taxonomy_infraorder" ColumnName="taxonomy#infraorder" />
+                <ScalarProperty Name="taxonomy_kingdom" ColumnName="taxonomy#kingdom" />
+                <ScalarProperty Name="taxonomy_order" ColumnName="taxonomy#order" />
+                <ScalarProperty Name="taxonomy_otherCommonNames" ColumnName="taxonomy#otherCommonNames" />
+                <ScalarProperty Name="taxonomy_phylum" ColumnName="taxonomy#phylum" />
+                <ScalarProperty Name="taxonomy_species" ColumnName="taxonomy#species" />
+                <ScalarProperty Name="taxonomy_subclass" ColumnName="taxonomy#subclass" />
+                <ScalarProperty Name="taxonomy_subfamily" ColumnName="taxonomy#subfamily" />
+                <ScalarProperty Name="taxonomy_subgenus" ColumnName="taxonomy#subgenus" />
+                <ScalarProperty Name="taxonomy_suborder" ColumnName="taxonomy#suborder" />
+                <ScalarProperty Name="taxonomy_subphylum" ColumnName="taxonomy#subphylum" />
+                <ScalarProperty Name="taxonomy_subspecies" ColumnName="taxonomy#subspecies" />
+                <ScalarProperty Name="taxonomy_superclass" ColumnName="taxonomy#superclass" />
+                <ScalarProperty Name="taxonomy_superfamily" ColumnName="taxonomy#superfamily" />
+                <ScalarProperty Name="taxonomy_superorder" ColumnName="taxonomy#superorder" />
+                <ScalarProperty Name="taxonomy_taxonName" ColumnName="taxonomy#taxonName" />
+                <ScalarProperty Name="waterColumnLocations" ColumnName="waterColumnLocations" />
+                <ScalarProperty Name="whenActive" ColumnName="whenActive" />
+                <ScalarProperty Name="whereToLook" ColumnName="whereToLook" />
+                <ScalarProperty Name="yearWritten" ColumnName="yearWritten" />
+                <ScalarProperty Name="url" ColumnName="url" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,29 @@
+﻿@model IE_Project_Final_WebApi.Models.Wildlife_Feedback
+@{
+    ViewBag.Title = "Feedback_wildlife";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Feedback_wildlife</h2>
+
+
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<div class="container" style="width:40%;margin-top:2%">
+
+    @using (Html.BeginForm("SaveRecord", "Feedback", FormMethod.Post))
+    {
+        @Html.DropDownListFor(model => model.Result, new List<SelectListItem>
+                    {
+                           new SelectListItem {Text="Success", Value="Success" },
+                           new SelectListItem {Text ="Failure", Value="Failure" },
+                    }, "-Select-", new { @class = "form-control" })
+
+        @Html.TextBoxFor(model => model.Name, new { @class = "form-control", @placeholder = "Name" })
+
+        @Html.TextBoxFor(model => model.Description, new { @class = "form-control", @placeholder = "Description" })
+
+        <input type="submit" value="Submit" class="btn btn-block btn-primary" />
+
+    }
+
+</div>
